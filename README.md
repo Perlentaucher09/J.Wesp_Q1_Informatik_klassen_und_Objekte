@@ -1,0 +1,1 @@
+# J.Wesp_Q1_Informatik_klassen_und_Objekte
