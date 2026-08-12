@@ -1,3 +1,10 @@
+class Utility{
+  public static void trennung(){
+    System.out.println("--------------------------------------------------");
+  }
+}
+
+
 public class Main {
     public static void main(String[] args) {
       Paket p1 = new Paket("P1007", 25.8, "im Zustellfahrzeug");
@@ -10,6 +17,7 @@ public class Main {
       Utility.trennung();
     }
 }
+
 
 class Paket{
   private String sendungsnummer;
@@ -28,16 +36,10 @@ class Paket{
     this.status = neuerStatus;
     System.out.println("der Status wure geändert auf: " + neuerStatus);
   }
+
   public void anzeigen(){
     System.out.println("Sendungsnummer: " + sendungsnummer);
     System.out.println("Gewicht: " + gewicht);
     System.out.println("Status: " + status);
-  }
-}
-
-
-class Utility{
-  public static void trennung(){
-    System.out.println("--------------------------------------------------");
   }
 }
