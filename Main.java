@@ -1,0 +1,42 @@
+public class Main {
+
+  
+    public static void main(String[] args) {
+      Paket p1 = new Paket("P1007", 25.8, "im Zustellfahrzeug");
+      Paket p2 = new Paket("P1008", 71.9, "in zustellung");
+
+      Utility.trennung();
+      p1.anzeigen();
+      Utility.trennung();
+      p2.anzeigen();
+      Utility.trennung();
+    }
+}
+
+class Paket{
+  private String sendungsnummer;
+  private Double gewicht;
+  private String status;
+
+  //Konstruktor
+
+  public Paket(String sendungsNr, Double gewicht, String status){
+    this.sendungsnummer = sendungsNr;
+    this.gewicht = gewicht;
+    this.status = status;
+  }
+
+  public void status_aendern(){
+    System.out.println("der Status wure geändert");
+  }
+  public void anzeigen(){
+    System.out.println("Sendungsnummer: " + sendungsnummer);
+    System.out.println("Gewicht: " + gewicht);
+    System.out.println("Status: " + status);
+  }
+}
+class Utility{
+  public static void trennung(){
+    System.out.println("--------------------------------------------------");
+  }
+}
