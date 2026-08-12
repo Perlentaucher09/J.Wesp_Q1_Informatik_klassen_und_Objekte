@@ -1,6 +1,4 @@
 public class Main {
-
-  
     public static void main(String[] args) {
       Paket p1 = new Paket("P1007", 25.8, "im Zustellfahrzeug");
       Paket p2 = new Paket("P1008", 71.9, "in zustellung");
@@ -8,7 +6,7 @@ public class Main {
       Utility.trennung();
       p1.anzeigen();
       Utility.trennung();
-      p2.anzeigen();
+      p1.status_aendern("zugestellt");
       Utility.trennung();
     }
 }
@@ -26,8 +24,9 @@ class Paket{
     this.status = status;
   }
 
-  public void status_aendern(){
-    System.out.println("der Status wure geändert");
+  public void status_aendern(String neuerStatus){
+    this.status = neuerStatus;
+    System.out.println("der Status wure geändert auf: " + neuerStatus);
   }
   public void anzeigen(){
     System.out.println("Sendungsnummer: " + sendungsnummer);
@@ -35,6 +34,8 @@ class Paket{
     System.out.println("Status: " + status);
   }
 }
+
+
 class Utility{
   public static void trennung(){
     System.out.println("--------------------------------------------------");
