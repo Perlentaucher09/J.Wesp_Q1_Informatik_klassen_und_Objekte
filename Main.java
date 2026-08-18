@@ -13,11 +13,9 @@ public class Main {
       Utility.trennung();
       p1.anzeigen();
       Utility.trennung();
-      p1.status_aendern("zugestellt");
-      Utility.trennung();
       p2.anzeigen();
       Utility.trennung();
-      p2.status_aendern("zugestellt");
+      p1.status_aendern("zugestellt");
       Utility.trennung();
     }
 }
