@@ -45,3 +45,15 @@ class Paket{
     System.out.println("Status: " + status);
   }
 }
+
+class Preis{
+  public static Double berechnePreis(Paket p){
+    if(p.gewicht <= 5){
+      return 5.0;
+    } else if(p.gewicht <= 20){
+      return 10.0;
+    } else {
+      return 15.0;
+    }
+
+}
