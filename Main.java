@@ -12,8 +12,10 @@ public class Main {
 
       Utility.trennung();
       p1.anzeigen();
+      System.out.println("Preis p1: " + Preis.berechnePreis(p1) + " €");
       Utility.trennung();
       p2.anzeigen();
+      System.out.println("Preis p2: " + Preis.berechnePreis(p2) + " €");
       Utility.trennung();
       p1.status_aendern("zugestellt");
       Utility.trennung();
@@ -44,16 +46,22 @@ class Paket{
     System.out.println("Gewicht: " + gewicht);
     System.out.println("Status: " + status);
   }
+
+  public Double getGewicht(){
+    return gewicht;
+  }
 }
 
 class Preis{
   public static Double berechnePreis(Paket p){
-    if(p.gewicht <= 5){
-      return 5.0;
-    } else if(p.gewicht <= 20){
-      return 10.0;
+    if (p.getGewicht() <= 2.0) {
+      return 4.99;
+    } else if (p.getGewicht() <= 5.0) {
+      return 6.99;
+    } else if (p.getGewicht() <= 10.0) {
+      return 8.99;
     } else {
-      return 15.0;
+      return 12.99;
     }
-
+  }
 }
