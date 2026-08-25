@@ -1,3 +1,4 @@
+package Pakete_ohne_arrays;
 public class Main {
     public static void main(String[] args) {
       Paket p1 = new Paket("P1007", 5.0, "Neu", false);
