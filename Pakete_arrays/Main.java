@@ -10,21 +10,16 @@ public class Main {
         pakete[2] = new Paket("P1003", 25.4, "eingegangen");
         pakete[3] = new Paket("P1004", 8.2, "versendet");
         
+        gewichtausgeben(pakete);
 
+    }
+    public static void gewichtausgeben(Paket[] pakete){
         for (int i = 0; i < pakete.length; i++) {
             if(pakete[i] != null){
                 Utility.trennung();
-                pakete[i].anzeigen();
-                Utility.trennung();
+                System.out.println("Gewicht: " + pakete[i].gewicht);
             }
         }
+        Utility.trennung();
     }
-    public static void gewichtausgeben(Paket[] pakete){
-        for (int j = 0; j < pakete.length; j++) {
-            if(pakete[j] != null){
-                System.out.println("Gewicht: " + pakete[j].gewicht);
-            }
-        }
-    }
-
 }
