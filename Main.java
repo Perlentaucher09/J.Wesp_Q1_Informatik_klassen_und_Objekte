@@ -14,6 +14,18 @@ public class Main {
       Utility.trennung();
       p4.anzeigen();
       Utility.trennung();
+
+      Paket [] lager = new Paket[5];
+      //Paket [] pakete = new Paket[10000];
+
+      lager[0] = new Paket("P0000", 1.0, "Neu", false);
+      lager[1] = new Paket("P0001", 2.0, "Unterwegs", true);
+      lager[2] = new Paket("P0002", 3.0, "Zugestellt", false);
+
+      for (int i = 0; i < lager.length; i++) {
+        lager[i].anzeigen();
+        Utility.trennung();
+      }
     }
 }
 
