@@ -5,9 +5,9 @@ public class Main {
 
         Paket [] lager = new Paket[5];
 
-        lager[0] = new Paket("P0000", 1.0, "Neu");
-        lager[1] = new Paket("P0001", 2.0, "Unterwegs");
-        lager[2] = new Paket("P0002", 3.0, "Zugestellt");
+        lager[0] = new Paket("P1001", 4.5, "Offen");
+        lager[1] = new Paket("P1002", 2.0, "Unterwegs");
+        lager[2] = new Paket("P1003", 3.0, "Zugestellt");
 
         for (int i = 0; i < lager.length; i++) {
             if(lager[i] != null){
