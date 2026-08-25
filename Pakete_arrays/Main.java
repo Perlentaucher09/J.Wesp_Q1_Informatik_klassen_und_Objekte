@@ -19,5 +19,12 @@ public class Main {
             }
         }
     }
+    public static void gewichtausgeben(Paket[] pakete){
+        for (int j = 0; j < pakete.length; j++) {
+            if(pakete[j] != null){
+                System.out.println("Gewicht: " + pakete[j].gewicht);
+            }
+        }
+    }
 
 }

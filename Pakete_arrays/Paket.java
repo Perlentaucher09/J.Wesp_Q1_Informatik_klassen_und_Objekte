@@ -1,9 +1,9 @@
 package Pakete_arrays;
 
 class Paket {
-    private String sendungsNr;
-    private Double gewicht;
-    private String status;
+    String sendungsNr;
+    Double gewicht;
+    String status;
     
 
     Paket(String sendungsNr, Double gewicht, String status){
