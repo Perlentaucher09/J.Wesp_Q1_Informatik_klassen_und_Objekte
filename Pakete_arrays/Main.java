@@ -10,8 +10,10 @@ public class Main {
         pakete[2] = new Paket("P1003", 25.4, "eingegangen", false);
         pakete[3] = new Paket("P1004", 8.2, "versendet", true);
 
-        Lager.gewichtausgeben(pakete);
+        Lager_methoden.gewichtausgeben(pakete);
 
-        Lager.anzeigen(pakete);
+        
+        Lager_methoden.statusupdate(pakete, "sortiert");
+        Lager_methoden.anzeigen(pakete);
     }
 }

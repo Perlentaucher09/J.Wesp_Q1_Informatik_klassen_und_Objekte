@@ -37,4 +37,7 @@ class Paket {
     }
     return Math.round(preis * 100.0) / 100.0; // Preis auf 2 Dezimalstellen runden
   }
+  public void statusupdate(String neuerStatus) {
+    this.status = neuerStatus;
+  }
 }
