@@ -20,14 +20,12 @@ class Paket {
         System.out.println("Express: " + express);
         System.out.println("Preis: " + berechnePreis());
     }
-      public Double berechnePreis() {
-
+    
+    public Double berechnePreis() {
     double preis = 0.0;
-
     if (express) {
         preis += 5.0; // Expresszuschlag
     }
-
     if (gewicht <= 2.0) {
       preis += 4.99;
     } else if (gewicht <= 5.0) {
@@ -37,7 +35,6 @@ class Paket {
     } else {
       preis += 12.99;
     }
-
     return Math.round(preis * 100.0) / 100.0; // Preis auf 2 Dezimalstellen runden
   }
 }

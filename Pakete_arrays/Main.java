@@ -24,6 +24,7 @@ public class Main {
         }
         Utility.trennung();
     }
+    
     public static void anzeigen(Paket[] pakete){
         for (int i = 0; i < pakete.length; i++) {
             if(pakete[i] != null){
