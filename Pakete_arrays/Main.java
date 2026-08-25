@@ -6,8 +6,10 @@ public class Main {
         Paket [] pakete = new Paket[5];
 
         pakete[0] = new Paket("P1001", 4.5, "Offen");
-        pakete[1] = new Paket("P1002", 2.0, "Unterwegs");
-        pakete[2] = new Paket("P1003", 3.0, "Zugestellt");
+        pakete[1] = new Paket("P1002", 12.8, "sortiert");
+        pakete[2] = new Paket("P1003", 25.4, "eingegangen");
+        pakete[3] = new Paket("P1004", 8.2, "versendet");
+        
 
         for (int i = 0; i < pakete.length; i++) {
             if(pakete[i] != null){
