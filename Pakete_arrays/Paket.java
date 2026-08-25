@@ -1,6 +1,6 @@
 package Pakete_arrays;
 
-public class Paket {
+class Paket {
     private String sendungsNr;
     private Double gewicht;
     private String status;
