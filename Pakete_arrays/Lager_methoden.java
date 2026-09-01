@@ -28,4 +28,38 @@ class Lager_methoden{
             }
     }
     }
+
+    public static int lineareSuche(Paket[] pakete, String gesucht){
+
+        for (int i = 0; i < pakete.length; i++) {
+
+            if (pakete[i].sendungsNr.equals(gesucht)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    public static int binaereSuche(Paket[] pakete, String gesucht) {
+
+        int low = 0;
+        int high = pakete.length - 1;
+
+        while (low <= high) {
+
+            int mid = (low + high) / 2;
+
+            if (pakete[mid].sendungsNr.equals(gesucht)) {
+                return mid;
+            }
+
+            if (pakete[mid].sendungsNr.compareTo(gesucht) < 0) {
+                low = mid + 1;
+            }
+            else {
+                high = mid - 1;
+            }
+        }
+
+        return -1;
+    }
 }
