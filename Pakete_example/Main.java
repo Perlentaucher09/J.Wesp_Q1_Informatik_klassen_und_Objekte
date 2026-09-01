@@ -75,6 +75,14 @@ public class Main {
         else {
             System.out.println("Paket nicht gefunden."); 
         }
+
+        int position2 = binaereSuche(pakete, "S1013");
+        if (position2 != -1) {
+            System.out.println("Paket gefunden an Position " + position2);
+        }
+        else {
+            System.out.println("Paket nicht gefunden.");
+        }
     }
 
     public static void gewichtAusgaben(Paket[] pakete) {
@@ -106,5 +114,27 @@ public class Main {
         }
         return -1;
     }
+    public static int binaereSuche(Paket[] pakete, String gesucht) {
 
+        int low = 0;
+        int high = pakete.length - 1;
+
+        while (low <= high) {
+
+            int mid = (low + high) / 2;
+
+            if (pakete[mid].sendungsnummer.equals(gesucht)) {
+                return mid;
+            }
+
+            if (pakete[mid].sendungsnummer.compareTo(gesucht) < 0) {
+                low = mid + 1;
+            }
+            else {
+                high = mid - 1;
+            }
+        }
+
+        return -1;
+    }
 }
