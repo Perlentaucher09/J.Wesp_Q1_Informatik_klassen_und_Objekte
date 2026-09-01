@@ -56,6 +56,8 @@ public class Main {
         pakete[18] = new Paket("S1019", 13.9, "versendet");
         pakete[19] = new Paket("S1020", 8.6, "sortiert");
 
+        //--------------------------------------------------------------------------------------
+
         gewichtAusgaben(pakete);
         System.out.println();
         statusAktualisieren(pakete);
@@ -67,6 +69,8 @@ public class Main {
             System.out.println(pakete[i].sendungsnummer + ": " + pakete[i].berechneVersandKosten() + " Euro");
         }
 
+        //--------------------------------------------------------------------------------------
+
         int position = lineareSuche(pakete, "S1017");
 
         if (position != -1) {
@@ -75,6 +79,7 @@ public class Main {
         else {
             System.out.println("Paket nicht gefunden."); 
         }
+        
 
         int position2 = binaereSuche(pakete, "S1013");
         if (position2 != -1) {
