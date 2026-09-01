@@ -72,14 +72,13 @@ public class Main {
         //--------------------------------------------------------------------------------------
 
         int position = lineareSuche(pakete, "S1017");
-
         if (position != -1) {
             System.out.println("Paket gefunden an Position " + position); 
         }
         else {
             System.out.println("Paket nicht gefunden."); 
         }
-        
+
 
         int position2 = binaereSuche(pakete, "S1013");
         if (position2 != -1) {
