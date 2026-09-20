@@ -1,4 +1,5 @@
 package Pakete_arrays;
+
 class KuehlPaket extends Paket {
     public KuehlPaket(String sendungsNr, Double gewicht, String status, boolean express) {
         super(sendungsNr, gewicht, status, express);

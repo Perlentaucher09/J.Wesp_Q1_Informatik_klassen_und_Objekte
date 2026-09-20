@@ -23,7 +23,7 @@ public class Main {
         pakete[15] = new Paket("S1016", 11.3, "versendet", true);
         pakete[16] = new Paket("S1017", 4.8, "sortiert", false);
         pakete[17] = new Paket("S1018", 27.6, "eingegangen", false);
-        pakete[18] = new Paket("S1019", 13.9, "versendet", true);
+        pakete[18] = new SpeerPaket("S1019", 13.9, "versendet", true);
         pakete[19] = new KuehlPaket("S1020", 8.6, "sortiert", false);
 
         Lager_methoden.gewichtausgeben(pakete);
