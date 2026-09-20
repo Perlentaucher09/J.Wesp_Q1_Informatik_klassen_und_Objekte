@@ -1,7 +1,15 @@
 package Pakete_arrays;
 
 class Lager_methoden{
-    public static void gewichtausgeben(Paket[] pakete){
+
+    private Paket[] pakete;
+
+    public Lager_methoden(int size) {
+        pakete = new Paket[size];
+    }
+    
+
+    public void gewichtausgeben(){
         for (int i = 0; i < pakete.length; i++) {
             if(pakete[i] != null){
                 Utility.trennung();
@@ -11,7 +19,7 @@ class Lager_methoden{
         Utility.trennung();
     }
 
-    public static void anzeigen(Paket[] pakete){
+    public void anzeigen(){
         for (int i = 0; i < pakete.length; i++) {
             if(pakete[i] != null){
                 Utility.trennung();
@@ -21,7 +29,7 @@ class Lager_methoden{
         Utility.trennung();
     } 
     
-    public static void statusupdate (Paket[] pakete, String neuerStatus){
+    public void statusupdate (String neuerStatus){
         for (int i = 0; i < pakete.length; i++){
             if (pakete[i] != null && pakete[i].status == "eingegangen"){
                 pakete[i].statusupdate(neuerStatus);
@@ -29,7 +37,7 @@ class Lager_methoden{
     }
     }
 
-    public static int lineareSuche(Paket[] pakete, String gesucht){
+    public int lineareSuche(String gesucht){
 
         for (int i = 0; i < pakete.length; i++) {
 
@@ -39,7 +47,8 @@ class Lager_methoden{
         }
         return -1;
     }
-    public static int binaereSuche(Paket[] pakete, String gesucht) {
+
+    public int binaereSuche(String gesucht) {
 
         int low = 0;
         int high = pakete.length - 1;
@@ -61,5 +70,14 @@ class Lager_methoden{
         }
 
         return -1;
+    }
+    public void addpaket(Paket paket) {
+        for (int i = 0; i < pakete.length; i++) {
+            if (pakete[i] == null) {
+                pakete[i] = paket;
+                return;
+            }
+        }
+        System.out.println("Lager ist voll. Paket konnte nicht hinzugefügt werden.");
     }
 }
