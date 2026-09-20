@@ -4,9 +4,9 @@ public class Bibliothek {
     private String name;
     private Buch[] buecher;
 
-    public Bibliothek(String name, int anzahlBuecher) {
+    public Bibliothek(String name, Buch[] buecher) {
         this.name = name;
-        this.buecher = new Buch[anzahlBuecher];
+        this.buecher = buecher;
     }
 
     public void ausleihen() { 
