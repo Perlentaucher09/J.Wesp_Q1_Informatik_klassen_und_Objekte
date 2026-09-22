@@ -3,9 +3,11 @@ package Pakete_arrays;
 class Lager_methoden{
 
     private Paket[] pakete;
+    private String name; 
 
-    public Lager_methoden(int size) {
-        pakete = new Paket[size];
+    public Lager_methoden(String name, int size) {
+        this.pakete = new Paket[size];
+        this.name = name;
     }
     
 
@@ -20,6 +22,11 @@ class Lager_methoden{
     }
 
     public void anzeigen(){
+        Utility.trennung();
+        System.out.println();
+        System.out.println("Lager: " + name);
+        System.out.println();
+        Utility.trennung();
         for (int i = 0; i < pakete.length; i++) {
             if(pakete[i] != null){
                 Utility.trennung();

@@ -3,7 +3,7 @@ package Pakete_arrays;
 public class Main {
     public static void main(String[] args) {
 
-        Lager_methoden lager = new Lager_methoden(20);
+        Lager_methoden lager = new Lager_methoden("Lager Nr.1",20);
 
         
 
