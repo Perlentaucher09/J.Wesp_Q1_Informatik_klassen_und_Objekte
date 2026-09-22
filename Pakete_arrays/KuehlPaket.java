@@ -7,6 +7,6 @@ class KuehlPaket extends Paket {
     @Override 
     public Double berechnePreis()
     {
-        return gewicht * 0.5 + 10;
+        return gewicht * 3.5;
     }
 }
