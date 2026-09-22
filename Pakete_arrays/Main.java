@@ -3,9 +3,9 @@ package Pakete_arrays;
 public class Main {
     public static void main(String[] args) {
 
-        Lager_methoden lager = new Lager_methoden("Lager Nr.1",20);
+        // Lager erstellen
 
-        
+        Lager_methoden lager = new Lager_methoden("Lager Nr.1",100);
 
         lager.addpaket(new Paket("S1001", 4.5, "eingegangen", true));
         lager.addpaket(new Paket("S1002", 12.8, "sortiert", false));
@@ -28,15 +28,15 @@ public class Main {
         lager.addpaket(new SpeerPaket("S1019", 13.9, "versendet", true));
         lager.addpaket(new KuehlPaket("S1020", 8.6, "sortiert", false));
 
-        lager.gewichtausgeben();
-
-
+        // statusupdate
         lager.statusupdate("sortiert");
+
+        // Lager anzeigen
+        lager.gewichtausgeben();
         lager.anzeigen();
 
-
-
-
+        // Suchmethoden
+        // lineare Suche
         int position = lager.lineareSuche("S1017");
         if (position != -1) {
             System.out.println("Paket gefunden an Position " + position); 
@@ -47,10 +47,7 @@ public class Main {
             Utility.trennung();
         }
 
-
-
-
-
+        // binäre Suche
         int position2 = lager.binaereSuche( "S1013");
         if (position2 != -1) {
             System.out.println("Paket gefunden an Position " + position2);
