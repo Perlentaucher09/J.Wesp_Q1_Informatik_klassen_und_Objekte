@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Main_neu (26kw43)",
+            "request": "launch",
+            "mainClass": "Main_neu",
+            "classPaths": [
+                "${workspaceFolder}/.vscode/java-bin/26kw43"
+            ],
+            "preLaunchTask": "Kompiliere Main_neu"
+        }
+    ]
+}
