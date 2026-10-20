@@ -8,7 +8,7 @@ public class Main_neu {
         double gewicht = gesamtGewicht(10.5, 3);
         System.out.println("Gesamtgewicht: " + gewicht);
 
-        double kosten = versandkosten(4, 0.0);
+        double kosten = versandkosten(4, 4.0);
         System.out.println("Versandkosten: " + kosten);
 
         int ergebnis = potenz(2, 3);
