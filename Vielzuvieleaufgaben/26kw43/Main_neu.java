@@ -10,6 +10,9 @@ public class Main_neu {
 
         double kosten = versandkosten(4, 0.0);
         System.out.println("Versandkosten: " + kosten);
+
+        int ergebnis = potenz(2, 3);
+        System.out.println("Ergebnis: " + ergebnis);
     }
 
     public static void verarbeiteRueckwaerts(int nummer) {
@@ -36,5 +39,14 @@ public class Main_neu {
             return zp;
         }
         return zp + 2 + versandkosten(schritte - 1, zp);
+    }
+    public static int potenz(int basis, int exponent){
+        if (exponent == 0) {
+            return 1;
+        }
+        if (exponent < 0) {
+            return 0;
+        }
+        return basis * potenz(basis, exponent - 1);
     }
 }
